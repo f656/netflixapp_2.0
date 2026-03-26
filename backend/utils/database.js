@@ -1,13 +1,11 @@
 import mongoose from "mongoose";
-//import dotenv from "dotenv";
+import dotenv from "dotenv";
 
-// dotenv.config({
-//     path: "../.env"
-// });
-const db = 'mongodb+srv://faizanali4958:netbeans@cluster0.iypzbaf.mongodb.net/'
+dotenv.config()
+ 
 const databaseConnection = async () => {
     try {
-        await mongoose.connect(db);
+        await mongoose.connect(process.env.MONGO_URI);
         console.log("MongoDB connected successfully");
     } catch (error) {
         console.error("Error connecting to MongoDB:", error);

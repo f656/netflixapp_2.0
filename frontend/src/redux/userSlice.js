@@ -4,7 +4,7 @@ import {createSlice} from "@reduxjs/toolkit";
     name:"user",
     initialState:{
         user:null,
-        isLoading:false,
+        isLoading:true,
     },
     reducers:{
         //actions
