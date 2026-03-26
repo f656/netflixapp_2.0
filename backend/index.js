@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(cookieParser());
 //cors
 const corsOptions = {
-    origin:'http://localhost:5173',
+    origin:'https://netflixapp-2-0.onrender.com',
     credentials:true
 
 }

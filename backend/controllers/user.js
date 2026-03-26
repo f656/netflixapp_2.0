@@ -33,8 +33,8 @@ export const Login = async (req, res) => {
 
         return res.status(200).cookie("token", token, {
             httpOnly: true,
-            sameSite: "lax",
-            secure: false
+            sameSite: "none",
+            secure: true
         }).json({
             message: `Welcome back ${user.fullName}`,
             user,
